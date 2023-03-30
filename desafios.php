@@ -28,11 +28,23 @@ while($contador <= 100){
 /*- Faça um programa que exiba a tabuada do 8.*/
 
 
-$contador = 0;
+/*$contador = 1;
 while ($contador <= 10) {
-    echo "8" . "<br>";
-    echo $contador * 8; 
+    echo ($contador * 8) . "<br>"; 
     $contador++;  
 }
+*/
+
+/*- Faça um programa que leia a idade de uma pessoa e informe se ela é maior ou menor de 18 anos. Dica: você vai precisar criar um formulário HTML.*/
+
+/*$idade = 17;
+if($idade >= 18){
+    echo "maior de idade";
+}else{
+    echo "menor de idade";
+    $diferenca = 18 - $idade;
+}
+*/
+
 
 ?>
