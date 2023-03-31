@@ -1,0 +1,10 @@
+marcio	nova odessa	226	15161748	15122158	monte	monte
+alexandre	nova odessa	226	15161748	15122158	monte	monte
+marcio	nova odessa	226	15161748	15122158	monte	monte
+junior	nova odessa	226	15161748	15122158	monte	monte
+guto	nova odessa	226	15161748	15122158	monte	monte
+aaaa	nova odessa	226	15161748	15122158	monte	monte
+alex	am	285	545132	28105	monte	monte
+alex	am	285	545132	28105	monte	monte
+julia	americana	2130310320	215561561	151616165	akaos	okapds
+				
