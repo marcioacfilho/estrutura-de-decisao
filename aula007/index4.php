@@ -9,33 +9,22 @@
 </head>
 
 <body>
-    <h1> Status da Lâmpada</h1>
-
-    <select name="">
-        <option value="Apagada">Apagada</option>
-        <option value="Acesa">Acesa</option>
-
-        <img src="lamp-acesa.png" alt="">
-        <img src="lamp-apagada.png" alt="">
-
-
-
-    </select>
-    <br><br>
-
-    <button type="submit">Enviar</button>
-
+    <form method="post">
+        Status da lâmpada:<br>
+        <select name="lampada">
+            <option value="acesa">Acesa</option>
+            <option value="apagada">Apagada</option>
+        </select><br>
+        <button type="submit">Enviar</button>
+    </form>
     <?php
-
-
+    $lampada = $_POST['lampada'] ?? "";
+    if ($lampada == "acesa") {
+        echo "<img width='150' src='lamp-acesa.png'>";
+    } else if ($lampada == "apagada") {
+        echo "<img width='150' src='lamp-apagada.png'>";
+    }
     ?>
-
-    ?>
-
-
-
-
-
 </body>
 
 </html>
