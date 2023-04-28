@@ -56,18 +56,42 @@ include "menu.php";
     </div>  -->
 
     <?php
-    for ($i = 0; $i < 8; $i++) :
-    ?>
+    $servidor_bd = "127.0.0.1";
+    $usuario_bd = "root";
+    $senha_bd = "";
+    $banco_de_dados = "delivery_jogos_novo";
 
+    $conexao = mysqli_connect($servidor_bd, $usuario_bd, $senha_bd, $banco_de_dados);
+
+    $sql_buscar = "select * from jogo";
+
+    $todos_os_jogos = mysqli_query($conexao, $sql_buscar);
+
+    while($um_jogo = mysqli_fetch_assoc($todos_os_jogos)):
+      ?>
+      
       <div class="col-md-3 text-center mb-4">
-        <img src="img/jogo17.jpg" class="img-fluid">
-        <h3>Nome do jogo</h3>
-        <a href="nomedojogo.php" class="btn btn-primary">VER MAIS</a>
+        <img src="<?php echo $um_jogo["foto"];?>" class="img-fluid" style="object-fit: cover; height: 150px; width: 100%; object-position: top center;">
+        <h6 class="mt-3 mb-3" style="color:<?php echo $cor;?>"><?php echo $um_jogo["categoria"];?></h6>
+        <?php
+        $cor = "";
+        if (strtoupper($um_jogo["categoria"]) == "JOGO DE FPS"){
+          $cor = "red";
+        }
+        else if (strtoupper($um_jogo["categoria"]) == "JOGO DE LUTA"){
+          $cor = "orange";
+        }
+        else if (strtoupper($um_jogo["categoria"]) == "JOGO DE HISTORIA"){
+          $cor = "green";
+        }
+        ?>
+        <h5 class="mt-3 mb-3"><?php echo $um_jogo["titulo"];?></h5>
+        <a href="<?php echo $um_jogo["video"];?>" class="btn btn-outline-primary">VER MAIS</a>
       </div>
-
-    <?php
-    endfor;
+      <?php
+      endwhile;
     ?>
+
   </div>
   <div class="row mt-5">
     <div class="col-12 text-center">

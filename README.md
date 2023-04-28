@@ -10,3 +10,11 @@
 - [X] listagem dos clientes na tela
 - [X] mostrar mensagem quando o cliente for cadastrado 
 
+
+
+/* 1. conexão com banco de dados
+                - servidor do banco (endereço / ip)
+                - usuário do banco (root)
+                - senha do usuário (não tem senha)
+                - banco de dados (delivery jogos)
+            */
