@@ -11,7 +11,7 @@ include "menu-sistema.php";
     </div>
     <div class="row">
         <div class="col">
-            <table border="1">
+            <table class="table table-dark table-sm">
                 <tr>
                     <td>Códigos</td>
                     <td>Título</td>
@@ -22,15 +22,19 @@ include "menu-sistema.php";
                 include "conexao.php";
                 $sql_buscar = "select * from jogo";
                 $todos_os_jogos = mysqli_query($conexao, $sql_buscar);
-                while ($um_jogo = mysqli_fetch_assoc($todos_os_jogos)):
-                    ?>
+                while ($um_jogo = mysqli_fetch_assoc($todos_os_jogos)) :
+                ?>
                     <tr>
-                        
-                    <td> <?php echo $um_jogo["id"]; ?> </td>
-                    <td> <?php echo $um_jogo["titulo"]; ?> </td>
-                    <td> <?php echo $um_jogo["categoria"]; ?> </td>
+                        <td> <?php echo $um_jogo["id"]; ?> </td>
+                        <td> <?php echo $um_jogo["titulo"]; ?> </td>
+                        <td> <?php echo $um_jogo["categoria"]; ?> </td>
+                        <td>
+                            <a href="excluir-jogos.php?id=<?php echo $um_jogo["id"]; ?>">
+                                <img src="img/excluir.png" width="20">
+                            </a>
+                        </td>
                     </tr>
-                    <?php
+                <?php
                 endwhile;
                 mysqli_close($conexao);
                 ?>
