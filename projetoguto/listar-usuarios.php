@@ -22,16 +22,23 @@ include "menu-sistema.php";
                 include "conexao.php";
                 $sql_buscar = "select * from usuario";
                 $todos_os_usuario = mysqli_query($conexao, $sql_buscar);
-                while ($um_usuario = mysqli_fetch_assoc($todos_os_usuario)):
-                    ?>
+                while ($um_usuario = mysqli_fetch_assoc($todos_os_usuario)) :
+                ?>
                     <tr>
-                    <td> <?php echo $um_usuario["id"]; ?> </td>
-                    <td> <?php echo $um_usuario["nome"]; ?> </td>
-                    <td> <?php echo $um_usuario["email"]; ?> </td>
-                    <td>Excluir usuário</td>
-                    
+                        <td> <?php echo $um_usuario["id"]; ?> </td>
+                        <td> <?php echo $um_usuario["nome"]; ?> </td>
+                        <td> <?php echo $um_usuario["email"]; ?> </td>
+                        <td>Excluir usuário
+                            <a href="excluir-usuario.php?id=<?php echo $um_usuario["id"]; ?>">
+                                <img src="img/excluir.png" width="20">
+                            </a>
+                            <a href="listar-usuario.php?id=<?php echo $um_usuario["id"]; ?>">VER</a>
+                            <a href="editar-usuario.php?id=<?php echo $um_usuario["id"]; ?>">EDITAR</a>
+                        </td>
+                        
+
                     </tr>
-                    <?php
+                <?php
                 endwhile;
                 mysqli_close($conexao);
                 ?>
