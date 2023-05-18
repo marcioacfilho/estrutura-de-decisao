@@ -20,4 +20,3 @@ header("location:listar-jogos.php?msg=sucesso");
 
 ?>
 
-?>

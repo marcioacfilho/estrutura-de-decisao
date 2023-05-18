@@ -32,7 +32,7 @@ include "menu-sistema.php";
                             <a href="excluir-usuario.php?id=<?php echo $um_usuario["id"]; ?>">
                                 <img src="img/excluir.png" width="20">
                             </a>
-                            <a href="listar-usuario.php?id=<?php echo $um_usuario["id"]; ?>">VER</a>
+                            <a href="ver-usuario.php?id=<?php echo $um_usuario["id"]; ?>">VER</a>
                             <a href="editar-usuario.php?id=<?php echo $um_usuario["id"]; ?>">EDITAR</a>
                         </td>
                         

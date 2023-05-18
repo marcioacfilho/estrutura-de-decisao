@@ -27,7 +27,7 @@ mysqli_close($conexao);
                 Foto: <input name="foto" value="<?php echo $foto; ?>">
                 Categoria: <input name="categoria" value="<?php echo $categoria; ?>">
                 Video: <input name="video" value="<?php echo $video ?>">
-                <button type="submi">Salvar</button>
+                <button type="submit">Salvar</button>
             </form>
         </div>
     </div>
