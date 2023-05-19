@@ -41,6 +41,9 @@ include "menu-sistema.php";
                 endwhile;
                 mysqli_close($conexao);
                 ?>
+                <div>
+                <button type="submit" class="btn btn-success w-25">CADASTRAR NOVO JOGO</button>
+                </div>
             </table>
         </div>
     </div>
